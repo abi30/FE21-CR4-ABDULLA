@@ -1,10 +1,17 @@
 
 
-    
- const header = document.createElement("header");
- header.setAttribute("id" , "header");
-//  body.insertBefore(header,body.firstChild);
-//  document.body.firstChild.appendChild(header);
+
+
+const header_form=document.createElement("form");
+header_form.setAttribute("id","form");
+document.getElementById("myheader").appendChild(header_form);
+
+const input_search= document.createElement("input");
+input_search.setAttribute("id" ,"search");
+input_search.classList.add("search");
+input_search.setAttribute("placeholder" ,"search");
+document.getElementById("form").appendChild(input_search);
+
 
 
 
@@ -31,8 +38,8 @@ function showMovies(allMovies) {
         // movieEl.id.add("movie");
         movieEl.classList.add("movie");
         movieEl.innerHTML=`
-        <img src="${poster}" 
-        alt="${title}">
+        <img  src="${poster}" 
+        alt="${title}" onclick="movieInfo()">
         <div class="movie-info">
             <h4>Title:${title}</h4>
             <h5>genres:${genres}</h5>
@@ -46,6 +53,13 @@ function showMovies(allMovies) {
     
            
     });
+
+
+    
+
+
+
+
 
 
 for(let i= 0; i<allMovies.length;i++){
@@ -69,6 +83,48 @@ for(let i= 0; i<allMovies.length;i++){
 
     
 }
+
+function movieInfo() {
+    for(let i= 0; i<allMovies.length;i++){
+
+
+      
+             document.getElementsByClassName("movie")[i] .addEventListener("click",()=>{
+                // var big_div=document.
+                var big_img=document.createElement("img");
+                big_img.setAttribute("id","dig_img"+[i]);
+                big_img.src=allMovies[i].poster;
+                console.log(allMovies[i].poster);
+                var new_div=document.getElementsByClassName("movie")[i];
+                new_div.setAttribute("style" ,"width:150%;");
+                new_div.appendChild(big_img);
+                // var p=document.createElement("p");
+                // var q=createTextNode(allMovies[i].storyline);
+                // p.appendChild(q);
+                // document.querySelector("#myheader").appendChild(p);
+
+                // poster[i].style.display="flex";
+                // cardContainers[i].setAttribute("style","width:100%;");
+                // cardMinis[i].style.display="none";
+            });
+            
+            // cardMaxis[i].addEventListener("click",()=>{
+            //     cardMinis[i].style.display="block";
+            //     cardContainers[i].setAttribute("style",  "width: auto;");
+            //     cardMaxis[i].style.display="none";
+            // });
+            
+            
+            }
+            
+
+
+
+    
+    
+}
+
+
 
 
 function getClassByRate(vote){
@@ -102,14 +158,6 @@ var btn=document.getElementById("likebtn"+[i]);
 
 }
 
-// const header = document.createElement("header");
-// header.setAttribute("id" , "header");
-// document.body.appendChild(header);
-
-
-const header_form=document.createElement("form");
-header_form.setAttribute("id","form");
-document.header.appendChild(header_form);
 
 
  
@@ -155,3 +203,24 @@ document.header.appendChild(header_form);
 // var content = document.createTextNode('text');
 // h1.appendChild(content);
 // document.body.appendChild(h1);
+
+
+
+// var foo= document.getElementsByTagName("footer");
+// foo.setAttribute("id", "foo");
+const foo= document.createElement("footer");
+foo.setAttribute("id","foo");
+document.body.appendChild(foo);
+foo.style.backgroundColor="#373b69";
+foo.style.height="100px";
+
+
+const lastHeader= document.createElement("h1");
+lastHeader.setAttribute("id" ,"lastHeader");
+var node_text= document.createTextNode("my Movies List");
+lastHeader.appendChild(node_text);
+lastHeader.style.color="white";
+lastHeader.style.textAlign="center";
+lastHeader.style.padding="2rem";
+
+document.getElementById("foo").appendChild(lastHeader);
