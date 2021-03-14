@@ -199,6 +199,7 @@ function getClassByRate(vote){
 // var newMoviesList=[];
  function moviesSearch(){
 
+  
     var newMoviesList=[];
    
   let x=document.getElementById('search').value;
@@ -206,17 +207,16 @@ function getClassByRate(vote){
 
 // console.log(x);
 for(let i=0; i<allMovies.length;i++){
-    if(x==allMovies[i].title){
+    if((x==allMovies[i].title)||(x==allMovies[i].genres)){
         newMoviesList.push(allMovies[i]);
        console.log("well done");
     }else{
+     
+        document.getElementById("lastHeader").innerHTML="! Sorry nothing Found !"
        
-        // alert(x  + " movie not present here");
 
     }
-console.log(x);
 }
-
 main.innerHTML="";
 showMovies(newMoviesList);
 
