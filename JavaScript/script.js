@@ -2,10 +2,42 @@
 
 
 // -------------------------create form
-const header_form=document.createElement("form");
-header_form.setAttribute("id","form");
-document.getElementById("myheader").appendChild(header_form);
+const form=document.createElement("form");
+form.setAttribute("id","form");
+// form.setAttribute("submit", "moviesSearch()");
+document.getElementById("myheader").appendChild(form);
 
+
+// ------------------------input-fild for searching
+const input_search= document.createElement("input");
+input_search.setAttribute("id" ,"search");
+input_search.classList.add("search");
+// input_search.setAttribute("submit"," moviesSearch()");
+input_search.setAttribute("placeholder" ,"search");
+document.getElementById("form").appendChild(input_search);
+
+
+
+// ------------------------button for seaching
+
+
+const search_input= document.createElement("input");
+search_input.setAttribute("id","search_button");
+search_input.setAttribute("type" ,"button");
+search_input.value="enter";
+search_input.setAttribute("onclick","moviesSearch()");
+search_input.style.borderRadius="20px";
+document.getElementById("form").appendChild(search_input);
+// search_input.addEventListener("onclick" ,moviesSearch());
+
+
+
+
+
+
+
+
+// -------------------------button for sorting
 // ------------------------button for sorting
 const sort_button=document.createElement("button");
 sort_button.setAttribute("id","sort_button");
@@ -15,18 +47,15 @@ sort_button.style.backgroundColor="transparent";
 sort_button.style.borderRadius="20px";
 document.getElementById("myheader").appendChild(sort_button);
 
-// ------------------------input for searching
-const input_search= document.createElement("input");
-input_search.setAttribute("id" ,"search");
-input_search.classList.add("search");
-input_search.setAttribute("placeholder" ,"search");
-document.getElementById("form").appendChild(input_search);
+
 
 
     var pre_click="";
 
     const main= document.getElementById("main");
     const allMovies=JSON.parse(movies);
+
+    console.log(allMovies);
 
         getMovies();
 
@@ -143,14 +172,13 @@ function like_count(id){
 
 
 // ------------------------take al time one click..and other clear
-function clear_history(clickedId){
-    console.log("clear_history");
+function clear_history(){
+    // console.log("clear_history");
     var pre_storyLine = document.getElementById(pre_click);
     if(pre_storyLine !=undefined)
        pre_storyLine.remove();
 
 }
-
 
 // ------------------------rating color function
 
@@ -167,21 +195,43 @@ function getClassByRate(vote){
 }
 
 // ------------------------search function is not completed  is going on
- function moviesSearch(input_value){
-    
-    
-   for(let i=0; i<allMovies.length;i++){
-       var str=allMovies[i].title;
-       console.log(str);
-       var n=str.search(input_value);
 
-    console.log(allMovies[i].title);
-    if(m==allMovies[i].title){
-      showMovies(allMovies[i]);
+// var newMoviesList=[];
+ function moviesSearch(){
+
+    var newMoviesList=[];
+   
+  let x=document.getElementById('search').value;
+  x.toString();
+
+// console.log(x);
+for(let i=0; i<allMovies.length;i++){
+    if(x==allMovies[i].title){
+        newMoviesList.push(allMovies[i]);
+       console.log("well done");
+    }else{
+       
+        // alert(x  + " movie not present here");
+
     }
+console.log(x);
 }
 
+main.innerHTML="";
+showMovies(newMoviesList);
+
+
 } 
+ 
+
+
+
+
+
+
+
+
+
 
 
 

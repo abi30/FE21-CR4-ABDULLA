@@ -1,6 +1,6 @@
 let movies =`
 [{
-    "id":1,
+    "id":0,
     "title": "Game Night",
     "genres": "Action",
     "poster": "img/MV5BMjQxMDE5NDg0NV5BMl5BanBnXkFtZTgwNTA5MDE2NDM@._V1_SY500_CR0,0,337,500_AL_.jpg",
@@ -11,7 +11,7 @@ let movies =`
     "posterurl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjQxMDE5NDg0NV5BMl5BanBnXkFtZTgwNTA5MDE2NDM@._V1_SY500_CR0,0,337,500_AL_.jpg"
 },
 {
-    "id":2,
+    "id":1,
     "title": "Area X:Annihilation",
     "genres":"Adventure",
     "poster": "img/MV5BMTk2Mjc2NzYxNl5BMl5BanBnXkFtZTgwMTA2OTA1NDM@._V1_SY500_CR0,0,320,500_AL_.jpg",
@@ -23,7 +23,7 @@ let movies =`
     "posterurl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTk2Mjc2NzYxNl5BMl5BanBnXkFtZTgwMTA2OTA1NDM@._V1_SY500_CR0,0,320,500_AL_.jpg"
 },
 {
-    "id":3,
+    "id":2,
     "title": "Hannah",
     "year": "2017",
     "genres":"Drama",
@@ -35,7 +35,7 @@ let movies =`
     "posterurl": "https://images-na.ssl-images-amazon.com/images/M/MV5BNWJmMWIxMjQtZTk0Mi00YTE0LTkyNzAtYzQxYjcwYjE4ZDk2XkEyXkFqcGdeQXVyMTc4MzI2NQ@@._V1_SY500_SX350_AL_.jpg"
 },
 {
-    "id":4,
+    "id":3,
     "title": "The Lodgers",
     "genres":
         "Drama",
@@ -49,7 +49,7 @@ let movies =`
     "posterurl": "https://images-na.ssl-images-amazon.com/images/M/MV5BM2FhM2E1MTktMDYwZi00ODA1LWI0YTYtN2NjZjM3ODFjYmU5XkEyXkFqcGdeQXVyMjY1ODQ3NTA@._V1_SY500_CR0,0,337,500_AL_.jpg"
 },
 {
-    "id":5,
+    "id":4,
     "title": "Beast of Burden",
     "genres":"Crime",
 
@@ -62,7 +62,7 @@ let movies =`
     "posterurl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjEyNTM3MDQ2NV5BMl5BanBnXkFtZTgwMDI5Nzk1NDM@._V1_SY500_CR0,0,336,500_AL_.jpg"
 },
 {
-    "id":6,
+    "id":5,
     "title": "The Chamber",
     "genres":"Thriller",
     "poster": "img/MV5BNTVlODgwMjgtZGUzMy00ZTY1LWIyMDEtYTI2Y2JlYzVjZTNkXkEyXkFqcGdeQXVyNTg0MDM1MzY@._V1_SY500_CR0,0,337,500_AL_.jpg",
@@ -75,7 +75,7 @@ let movies =`
     "posterurl": "https://images-na.ssl-images-amazon.com/images/M/MV5BNTVlODgwMjgtZGUzMy00ZTY1LWIyMDEtYTI2Y2JlYzVjZTNkXkEyXkFqcGdeQXVyNTg0MDM1MzY@._V1_SY500_CR0,0,337,500_AL_.jpg"
 },
 {
-    "id":7,
+    "id":6,
     "title": "Survivors Guide to Prison",
     "genres": "Documentary",
     "poster": "img/MV5BNzhmNmI5MDMtZDEyOC00ODkyLTkwODItODQzODAzY2QyZjVlXkEyXkFqcGdeQXVyMzQwMTY2Nzk@._V1_SY500_CR0,0,357,500_AL_.jpg",
@@ -88,7 +88,7 @@ let movies =`
     "posterurl": "https://images-na.ssl-images-amazon.com/images/M/MV5BNzhmNmI5MDMtZDEyOC00ODkyLTkwODItODQzODAzY2QyZjVlXkEyXkFqcGdeQXVyMzQwMTY2Nzk@._V1_SY500_CR0,0,357,500_AL_.jpg"
 },
 {
-    "id":8,
+    "id":7,
     "title": "Red Sparrow",
     "genres":"Thriller",
     "poster": "img/MV5BMTA3MDkxOTc4NDdeQTJeQWpwZ15BbWU4MDAxNzgyNTQz._V1_SY500_CR0,0,337,500_AL_.jpg",
@@ -100,7 +100,7 @@ let movies =`
     "posterurl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTA3MDkxOTc4NDdeQTJeQWpwZ15BbWU4MDAxNzgyNTQz._V1_SY500_CR0,0,337,500_AL_.jpg"
 },
 {
-    "id":9,
+    "id":8,
     "title": "Death Wish",
     "genres": "Crime",
     "poster": "img/MV5BMTkzNjU3MjE0MF5BMl5BanBnXkFtZTgwNTIyNDk0NDM@._V1_SY400_SX270_AL_.jpg",
@@ -112,7 +112,7 @@ let movies =`
     "posterurl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTkzNjU3MjE0MF5BMl5BanBnXkFtZTgwNTIyNDk0NDM@._V1_SY400_SX270_AL_.jpg"
 },
 {
-    "id":10,
+    "id":9,
     "title": "A Prayer Before Dawn",
     "genres":"Biography",
     "poster":"img/MV5BMTExMTU5NTkxNzZeQTJeQWpwZ15BbWU4MDM5NDg2MDQy._V1_SY500_CR0,0,337,500_AL_.jpg",
@@ -123,7 +123,7 @@ let movies =`
     "posterurl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTExMTU5NTkxNzZeQTJeQWpwZ15BbWU4MDM5NDg2MDQy._V1_SY500_CR0,0,337,500_AL_.jpg"
 },
 {
-    "id":11,
+    "id":10,
     "title": "They Remain",
     "genres":"Thriller",
     "poster": "img/MV5BMjI0NTEzMTk1OV5BMl5BanBnXkFtZTgwNTMwNDY3NDM@._V1_SY500_CR0,0,349,500_AL_.jpg",
@@ -137,7 +137,7 @@ let movies =`
     "posterurl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjI0NTEzMTk1OV5BMl5BanBnXkFtZTgwNTMwNDY3NDM@._V1_SY500_CR0,0,349,500_AL_.jpg"
 },
 {
-    "id":12,
+    "id":11,
     "title": "Submission",
     "genres":"Drama",
     "poster": "img/MV5BMjQ4NDkwMzM4OF5BMl5BanBnXkFtZTgwNzE3MzI3NDM@._V1_SY500_CR0,0,337,500_AL_.jpg",
@@ -148,7 +148,7 @@ let movies =`
     "posterurl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjQ4NDkwMzM4OF5BMl5BanBnXkFtZTgwNzE3MzI3NDM@._V1_SY500_CR0,0,337,500_AL_.jpg"
 },
 {
-    "id":13,
+    "id":12,
     "title": "Souvenir",
     "genres":"Drama",
     "poster":"img/MV5BZmJkZjVhNGUtOTg4MC00YzAwLTg4ZjEtZjAxYmVlNTlkOTgyXkEyXkFqcGdeQXVyNTQwMDA5NTg@._V1_SY500_CR0,0,333,500_AL_.jpg",
@@ -159,7 +159,7 @@ let movies =`
     "posterurl": "https://images-na.ssl-images-amazon.com/images/M/MV5BZmJkZjVhNGUtOTg4MC00YzAwLTg4ZjEtZjAxYmVlNTlkOTgyXkEyXkFqcGdeQXVyNTQwMDA5NTg@._V1_SY500_CR0,0,333,500_AL_.jpg"
 },
 {
-    "id":14,
+    "id":13,
     "title": "Dance Academy: The Movie",
     "genres":"Drama",
     "poster": "img/MV5BYjg2MzMwYmYtNjkwMS00N2VmLWI2MDMtMDA2ZjZiMDBkZDk1L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNTg3ODAyOTY@._V1_SY500_SX400_AL_.jpg",
@@ -170,7 +170,7 @@ let movies =`
    
     "posterurl": "https://images-na.ssl-images-amazon.com/images/M/MV5BYjg2MzMwYmYtNjkwMS00N2VmLWI2MDMtMDA2ZjZiMDBkZDk1L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNTg3ODAyOTY@._V1_SY500_SX400_AL_.jpg"
 },
-{    "id":15,
+{    "id":14,
     "title": "Ett veck i tiden",
     "genres":"Adventure",
     "poster": "img/MV5BMjMxNjQ5MTI3MV5BMl5BanBnXkFtZTgwMjQ2MTAyNDM@._V1_SY500_CR0,0,337,500_AL_.jpg",
@@ -183,7 +183,7 @@ let movies =`
 },
 {
 
-    "id":16,
+    "id":15,
     "title": "The Strangers: Prey at Night",
     "genres":"Horror",
     "poster": "img/MV5BMTY1OTIwODgzMV5BMl5BanBnXkFtZTgwMzUyMDgzNDM@._V1_SY500_CR0,0,337,500_AL_.jpg",
@@ -196,7 +196,7 @@ let movies =`
 },
 {
 
-    "id":17,
+    "id":16,
     "title": "The Hurricane Heist",
     "genres":"Action",
     "poster":"img/MV5BMzg3Y2MyNjgtMzk4ZS00OTU3LWEwZmMtN2Y0NTdlZjU0NGFiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SY500_CR0,0,337,500_AL_.jpg",
@@ -207,7 +207,7 @@ let movies =`
     "posterurl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMzg3Y2MyNjgtMzk4ZS00OTU3LWEwZmMtN2Y0NTdlZjU0NGFiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SY500_CR0,0,337,500_AL_.jpg"
 },
 {
-    "id":18,
+    "id":17,
     "title": "Gringo",
     "genres": "Action",
     "poster": "img/MV5BMjAyMTk2MTQ3Ml5BMl5BanBnXkFtZTgwNDQ2ODE0NDM@._V1_SY500_CR0,0,337,500_AL_.jpg",
@@ -219,7 +219,7 @@ let movies =`
     "posterurl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjAyMTk2MTQ3Ml5BMl5BanBnXkFtZTgwNDQ2ODE0NDM@._V1_SY500_CR0,0,337,500_AL_.jpg"
 },
 {
-    "id":19,
+    "id":18,
     "title": "Thoroughbreds",
     "genres": "Drama",
     "poster": "img/MV5BMTk4MzQ1NDY2OF5BMl5BanBnXkFtZTgwNjA4Nzc4MzI@._V1_SY500_CR0,0,337,500_AL_.jpg",
@@ -230,7 +230,7 @@ let movies =`
     "posterurl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTk4MzQ1NDY2OF5BMl5BanBnXkFtZTgwNjA4Nzc4MzI@._V1_SY500_CR0,0,337,500_AL_.jpg"
 },
 {
-    "id":20,
+    "id":19,
     "title": "The Leisure Seeker",
     "genres": "Adventure",
     "poster": "img/MV5BMTg1NTg2MzcyNF5BMl5BanBnXkFtZTgwNjMwMDIzNDM@._V1_SY500_CR0,0,337,500_AL_.jpg",
