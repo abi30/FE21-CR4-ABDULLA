@@ -12,7 +12,7 @@ document.getElementById("myheader").appendChild(form);
 const input_search= document.createElement("input");
 input_search.setAttribute("id" ,"search");
 input_search.classList.add("search");
-// input_search.setAttribute("submit"," moviesSearch()");
+input_search.setAttribute("type","text");
 input_search.setAttribute("placeholder" ,"search");
 document.getElementById("form").appendChild(input_search);
 
@@ -112,8 +112,9 @@ document.getElementById("myheader").appendChild(sort_button);
 // ------------------------like count funtion..
 function like_count(id){
     var likeValue=document.getElementById("likebtn"+[id]).value; 
+    console.log(likeValue);
     likeValue++;
-    allMovies[id-1].like=likeValue;
+    allMovies[id].like=likeValue;
     document.getElementById("likebtn"+[id]).value=likeValue;
     var like_span=document.getElementById("likes"+[id]);
     like_span.innerHTML=likeValue;
@@ -176,7 +177,7 @@ function clear_history(){
     // console.log("clear_history");
     var pre_storyLine = document.getElementById(pre_click);
     if(pre_storyLine !=undefined)
-       pre_storyLine.remove();
+    pre_storyLine.remove();
 
 }
 
@@ -198,40 +199,32 @@ function getClassByRate(vote){
 
 // var newMoviesList=[];
  function moviesSearch(){
+ 
+        var newMoviesList=[];   
+        var entireText1=allMovies[i].title;
+        var entireText2=allMovies[i].genres;
+        var searchText=document.getElementById('search').value;
 
-  
-    var newMoviesList=[];
-   
-  let x=document.getElementById('search').value;
-  x.toString();
 
-// console.log(x);
-for(let i=0; i<allMovies.length;i++){
-    if((x==allMovies[i].title)||(x==allMovies[i].genres)){
+        for(let i=0; i<allMovies.length;i++)
+        {
+        if((entireText1.toLowerCase().indexOf(searchText.toLowerCase()) > -1)||     (entireText2.toLowerCase().indexOf(searchText.toLowerCase()) > -1)){
         newMoviesList.push(allMovies[i]);
-       console.log("well done");
-    }else{
-     
-        document.getElementById("lastHeader").innerHTML="! Sorry nothing Found !"
-       
+        // console.log("well done");
+        }
 
-    }
-}
-main.innerHTML="";
-showMovies(newMoviesList);
+        }
+                main.innerHTML="";
+                if (newMoviesList==""){
+                document.getElementById("lastHeader").innerHTML="! Sorry nothing Found !";
+                }else{
+                document.getElementById("lastHeader").innerHTML="my Movies List";
+                }
+                showMovies(newMoviesList);
 
 
 } 
  
-
-
-
-
-
-
-
-
-
 
 
 
