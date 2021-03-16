@@ -201,13 +201,13 @@ function getClassByRate(vote){
  function moviesSearch(){
  
         var newMoviesList=[];   
-        var entireText1=allMovies[i].title;
-        var entireText2=allMovies[i].genres;
+       
         var searchText=document.getElementById('search').value;
-
 
         for(let i=0; i<allMovies.length;i++)
         {
+             var entireText1=allMovies[i].title;
+             var entireText2=allMovies[i].genres;
         if((entireText1.toLowerCase().indexOf(searchText.toLowerCase()) > -1)||     (entireText2.toLowerCase().indexOf(searchText.toLowerCase()) > -1)){
         newMoviesList.push(allMovies[i]);
         // console.log("well done");
