@@ -95,7 +95,7 @@ document.getElementById("myheader").appendChild(sort_button);
             <span class="${getClassByRate(voteAvg)}">Rating:${voteAvg}</span>
             <h6>Rel-Date:${releaseDate}</h6>
             <div class="like" id="${id}">
-            <button id="likebtn${id}" onclick="like_count(${id})" value="${like}">like</button>
+            <button id="likebtn${id}" class="likeButton"  value="${like}">like</button>
             <span id="likes${id}" style="background-color:${backgroundColor}">${like}</span>
             </div>
         </div>  
@@ -104,32 +104,42 @@ document.getElementById("myheader").appendChild(sort_button);
     
            
     });
-
+    var likeButton=document.getElementsByClassName("likeButton");
+console.log(likeButton);
+    for (let i = 0; i < likeButton.length; i++) {
+         likeButton[i].addEventListener("click" , ()=>{
+             allMovies[i].like++;
+             console.table(allMovies);
+            likeButton[i].nextElementSibling.innerHTML=allMovies[i].like;
+     
+         });
+       
+    
 }
 
-
+     }
 
 // ------------------------like count funtion..
-function like_count(id){
-    var likeValue=document.getElementById("likebtn"+[id]).value; 
-    console.log(likeValue);
-    likeValue++;
-    allMovies[id].like=likeValue;
-    document.getElementById("likebtn"+[id]).value=likeValue;
-    var like_span=document.getElementById("likes"+[id]);
-    like_span.innerHTML=likeValue;
+// function like_count(id){
+//     var likeValue=document.getElementById("likebtn"+[id]).value; 
+//     console.log(likeValue);
+//     likeValue++;
+//     allMovies[id].like=likeValue;
+//     document.getElementById("likebtn"+[id]).value=likeValue;
+//     var like_span=document.getElementById("likes"+[id]);
+//     like_span.innerHTML=likeValue;
 
-    if(likeValue>=10 ){
-        like_span.style.backgroundColor="#7FE816";
-    }else if (likeValue>=7){
-        like_span.style.backgroundColor="#FCA607";
-    }else if (likeValue>=4){
-        like_span.style.backgroundColor="#FC0707";
-    }else{
-        like_span.style.backgroundColor="#4aabe4;";
-    }
+//     if(likeValue>=10 ){
+//         like_span.style.backgroundColor="#7FE816";
+//     }else if (likeValue>=7){
+//         like_span.style.backgroundColor="#FCA607";
+//     }else if (likeValue>=4){
+//         like_span.style.backgroundColor="#FC0707";
+//     }else{
+//         like_span.style.backgroundColor="#4aabe4;";
+//     }
 
-}
+// }
 
 
 // ------------------------like sorting
