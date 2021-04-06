@@ -1,5 +1,5 @@
 # FE21-CR4-ABDULLA was movie Factory.
-# i used here javascript bootstrap and scss
+# i used here javascript bootstrap and css
 # i made some functions for sorting depends on number of likes.
 # i included here search option as well 
 # i took data from json not from API.
