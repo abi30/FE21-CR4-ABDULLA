@@ -85,20 +85,29 @@ document.getElementById("myheader").appendChild(sort_button);
         const movieEl=document.createElement("div");
  
         movieEl.classList.add("movie");
+        movieEl.classList.add("card");
+
         movieEl.setAttribute("id", "movie"+id);
         movieEl.innerHTML=`
-        <img id="${id}" src="${poster}" 
-        alt="${title}" onclick="movieInfo(this.id)">
-        <div class="movie-info" id="movie-info${id}">
-            <h4>Title:${title}</h4>
-            <h5>genres:${genres}</h5>
-            <span class="${getClassByRate(voteAvg)}">Rating:${voteAvg}</span>
-            <h6>Rel-Date:${releaseDate}</h6>
-            <div class="like" id="${id}">
+      
+            <img class"card-img-top" id="${id}" src="${poster}" 
+            alt="${title}" onclick="movieInfo(this.id)">
+
+                <div class="card-body movie-info" id="movie-info${id}">
+                    <h4 class="card-text">Title:${title}</h4>
+                    <h5 class="card-title">genres:${genres}</h5>
+                </div>  
+
+        <div class="movie-info card-footer">
+        <span class="${getClassByRate(voteAvg)}">Rating:${voteAvg}</span>
+        <h6 class="text_info">Rel-Date:${releaseDate}</h6>
+        <div class="like" id="${id}">
             <button id="likebtn${id}" class="likeButton"  value="${like}">like</button>
             <span id="likes${id}" style="background-color:${backgroundColor}">${like}</span>
-            </div>
-        </div>  
+        </div>
+       </div> 
+
+     
        `;
     main.appendChild(movieEl);
     

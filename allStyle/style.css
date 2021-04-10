@@ -159,4 +159,12 @@ main{
     background-color:#22254b;
 }
 
+.text_info{
+    color: #eee;
+}
+.card-footer{
+    border-style: none;
+    background-color: transparent;
+}
+
 
