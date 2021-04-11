@@ -168,3 +168,22 @@ main{
 }
 
 
+@media screen and (max-width:480px){
+   input.search{
+
+        width: 80%;
+        height: 30px;
+        margin-left:1rem;
+}
+  input#search_button{
+      padding-bottom: 2rem;
+     max-height: 20px;
+      text-align: center;
+      margin-left: 1rem;
+      border-style:solid;
+}
+
+}
+
+
+
